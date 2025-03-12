@@ -1,0 +1,17 @@
+function razzle() {
+    console.log("you have been razzled");
+}
+
+function razzleDazzle() {
+    console.log("you have been razzle dazzled");
+}
+
+razzle(); // => "you have been razzled"
+razzle(); // => "you have been razzled"
+
+function razzle(lawyer = "Billy", target = "'em") {
+    console.log(`${lawyer} razzle-dazzles ${target}!`);
+}
+
+razzle(); // => "Billy razzle-dazzles 'em!"
+razzle("Methuselah", "T'challah"); // => "Methuselah razzle-dazzles T'challah!"
