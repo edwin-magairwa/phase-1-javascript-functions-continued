@@ -9,8 +9,18 @@ const mondayWork = function(activity = "go to the office") {
 }
 
 // Define the wrapAdjective function
-function wrapAdjective(wrapper = "*") {
+function wrapAdjective(flair = "*") {
     return function(adjective = "special") {
-        return `You are ${wrapper}${adjective}${wrapper}!`;
+        return `You are ${flair}${adjective}${flair}!`;
     };
 }
+
+// Example Calls
+console.log(saturdayFun()); // "This Saturday, I want to roller-skate!"
+console.log(saturdayFun("bathe my dog")); // "This Saturday, I want to bathe my dog!"
+
+console.log(mondayWork()); // "This Monday, I will go to the office."
+console.log(mondayWork("work from home")); // "This Monday, I will work from home."
+
+const encouragingPromptFunction = wrapAdjective("!!!");
+console.log(encouragingPromptFunction("a dedicated programmer")); // "You are !!!a dedicated programmer!!!"
